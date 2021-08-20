@@ -1,0 +1,283 @@
+    * {
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    /* NavBar Styling */
+    
+    .Navbar_Content {
+        font-family: 'Patrick Hand', cursive;
+    }
+    
+    .Navbar_Content .navbar-brand {
+        font-size: 38px;
+        padding-left: 50px;
+    }
+    
+    .nav-item {
+        padding-left: 50px;
+    }
+    
+    .nav-link {
+        font-size: 25px;
+    }
+    /* Home Page Styling */
+    
+    .home_page {
+        width: 100%;
+    }
+    
+    .home_page_content {
+        padding: 150px 0 0 50px;
+        font-family: 'Kalam', cursive;
+    }
+    
+    .home_page_content .head1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #5a25c0;
+        animation: changeScale 3s 0.4s;
+        animation-iteration-count: infinite;
+    }
+    
+    .home_page_content .head2 {
+        font-size: 40px;
+        background-color: black;
+        display: inline-block;
+        color: aliceblue;
+        transform: skew(-10deg);
+        margin-top: 15px;
+        padding: 3px 0 0 8px;
+        border-radius: 13px;
+    }
+    
+    .home_page_content .head3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+    
+    .donate_btn {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.473);
+        text-decoration: none;
+        display: inline-block;
+        width: 120px;
+        height: 45px;
+        padding: 7px 0 0 25px;
+        letter-spacing: 1px;
+        margin-top: 15px;
+        font-size: 20px;
+        border-radius: 7px;
+        border: 2px solid black;
+        transition: all 0.3s linear;
+        font-weight: 700;
+    }
+    
+    .donate_btn:hover {
+        color: white;
+        background-color: black;
+        box-shadow: 3px 4px 5px rgba(18, 18, 18, 0.5);
+    }
+    
+    .home_img {
+        width: 500px;
+        height: 300px;
+        filter: grayscale(80%);
+        margin: 100px 0 20px 0;
+        box-shadow: 8px 6px 10px rgba(18, 18, 18, 0.5);
+    }
+    /* About Us Styling  */
+    
+    .aboutUs_page {
+        font-family: 'Kalam', cursive;
+    }
+    
+    .heading {
+        text-align: center;
+        font-size: 35px;
+        margin-top: 30px;
+        font-weight: 700;
+    }
+    
+    .heading::before {
+        height: 3px;
+        background-color: #02080e;
+        content: "";
+        display: inline-block;
+        margin-right: 1%;
+        transform: translateY(-7px);
+        animation: changewidth 3s 0.3s;
+        animation-iteration-count: infinite;
+    }
+    
+    .heading::after {
+        height: 3px;
+        background-color: #02080e;
+        content: "";
+        display: inline-block;
+        margin-left: 1%;
+        transform: translateY(-7px);
+        animation: changewidth 3s 0.3s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes changewidth {
+        0% {
+            width: 0px;
+        }
+        100% {
+            width: 68px;
+        }
+    }
+    
+    .aboutus_page_content {
+        font-size: 23px;
+        padding: 50px 0 0 50px;
+        width: 70%;
+        margin-bottom: 10px;
+        color: #5a25c0;
+    }
+    
+    .content {
+        margin-bottom: 10px;
+        list-style-type: square;
+    }
+    /* Get Involved Page Styling  */
+    
+    .get_involved_page {
+        font-family: 'Kalam', cursive;
+    }
+    
+    .get_involved_page_content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 40px;
+    }
+    
+    .get_involved_img {
+        width: 300px;
+        height: 300px;
+        filter: grayscale(80%);
+        transition: all 0.3s 0.1s linear;
+        box-shadow: 8px 6px 10px rgba(18, 18, 18, 0.5);
+    }
+    
+    .get_involved_img:hover {
+        transform: scale(1.1);
+    }
+    
+    .involvement {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .involvement p {
+        font-size: 25px;
+        margin-top: 30px;
+        border-top: 3px dashed black;
+        border-bottom: 3px dashed black;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    /* Footer Styling */
+    
+    .footer {
+        height: 70px;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-family: 'Patrick Hand', cursive;
+        margin-top: auto;
+    }
+    /* Responsive */
+    
+    @media(max-width: 1150px) {
+        .home_img {
+            width: 500px;
+            height: 300px;
+            filter: grayscale(80%);
+            margin-top: 100px;
+            margin-left: 10px;
+        }
+        .home_page_content {
+            margin: 0 0 0 10px;
+            font-family: 'Kalam', cursive;
+            width: 100%;
+        }
+        .aboutus_page_content {
+            padding: 30px 0 0 5px;
+            width: 90%;
+        }
+    }
+    
+    @media(max-width: 900px) {
+        .get_involved_page_content {
+            flex-direction: column;
+        }
+    }
+    
+    @media(max-width: 600px) {
+        .home_page_content .head2 {
+            font-size: 30px;
+        }
+        .home_page_content {
+            padding: 100px 0 0 50px;
+        }
+    }
+    
+    @media(max-width: 500px) {
+        .Navbar_Content .navbar-brand {
+            padding-left: 10px;
+        }
+        .nav-item {
+            padding-left: 10px;
+        }
+        .home_page_content {
+            padding: 100px 0 0 10px;
+        }
+        .home_img {
+            width: 97%;
+            margin-left: 10px;
+        }
+        .heading {
+            font-size: 25px;
+        }
+        .aboutus_page_content {
+            padding: 10px 10px 0 10px;
+            width: 100%;
+        }
+    }
+    
+    @media(max-width: 400px) {
+        .home_page_content .head2 {
+            font-size: 25px;
+        }
+        .home_page_content .head1 {
+            font-size: 15px;
+        }
+        .Navbar_Content .navbar-brand {
+            font-size: 30px;
+        }
+        .get_involved_page .heading {
+            font-size: 20px;
+        }
+        .footer {
+            font-size: 15px;
+        }
+    }
